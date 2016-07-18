@@ -5,7 +5,7 @@ var app = express();
 
 // Configure Middleware
 app.use(function(req, res, next) {
-    req.myMessage = "Hello from Middleware #1!"
+    req.myMessage = "Hello from Middleware #1!";
     next();
 });
 
