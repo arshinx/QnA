@@ -9,6 +9,11 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.use(function(req, res, next) {
+    console.log("Second piece of Middleware")
+    next();
+});
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function(){
