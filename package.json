@@ -1,13 +1,13 @@
 {
-  "name": "ClickED-Web",
+  "name": "ClickED Web",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "ClickED Web App",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Arshin Jain",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4"
