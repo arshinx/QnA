@@ -9,8 +9,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use("/different", function(req, res, next) {
-    console.log("Second piece of Middleware")
+app.use("/different/:id", function(req, res, next) {
+    console.log("Second piece of Middleware, ID: ", req.params.id)
     next();
 });
 
