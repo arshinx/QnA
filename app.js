@@ -9,8 +9,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use("/different/:id", function(req, res, next) {
-    console.log(req.myMessage)
+app.use(function(req, res, next) {
+    console.log(req.myMessage);
     next();
 });
 
