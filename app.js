@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
 });
 
 app.use("/different/:id", function(req, res, next) {
-    console.log("Second piece of Middleware, ID:", req.params.id)
+    console.log(req.myMessage)
     next();
 });
 
