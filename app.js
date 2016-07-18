@@ -3,6 +3,9 @@
 var express = require('express');
 var app = express();
 
+// Configure Middleware
+
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function(){
