@@ -5,12 +5,7 @@ var app = express();
 
 // Configure Middleware
 app.use(function(req, res, next) {
-    req.myMessage = "Hello from Middleware #1!";
-    next();
-});
-
-app.use(function(req, res, next) {
-    console.log(req.myMessage);
+    console.log("The leaves on the Tree are", req.query.color);
     next();
 });
 
