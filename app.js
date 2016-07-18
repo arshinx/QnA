@@ -4,8 +4,9 @@ var express = require('express');
 var app = express();
 
 // Configure Middleware
-app.use(function() {
-    
+app.use(function(req, res, next) {
+    console.log("First piece of Middleware")
+    next();
 });
 
 var port = process.env.PORT || 3000;
