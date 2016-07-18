@@ -1,5 +1,5 @@
 {
-  "name": "ClickED Web",
+  "name": "ClickED-Web",
   "version": "1.0.0",
   "description": "ClickED Web App",
   "main": "app.js",
@@ -10,6 +10,7 @@
   "author": "Arshin Jain",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.13.4"
   }
 }
