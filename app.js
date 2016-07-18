@@ -2,6 +2,7 @@
 
 var express = require('express');
 var app = express();
+var jsonParser = require('body-parser').json;
 
 // Configure Middleware
 app.use(function(req, res, next) {
