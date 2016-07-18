@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(function(req, res, next) {
+app.use("different", function(req, res, next) {
     console.log("Second piece of Middleware")
     next();
 });
