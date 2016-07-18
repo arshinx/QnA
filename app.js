@@ -5,12 +5,12 @@ var app = express();
 
 // Configure Middleware
 app.use(function(req, res, next) {
-    console.log("First piece of Middleware")
+    req.myMessage = "Hello from Middleware #1!"
     next();
 });
 
 app.use("/different/:id", function(req, res, next) {
-    console.log("Second piece of Middleware, ID: ", req.params.id)
+    console.log("Second piece of Middleware, ID:", req.params.id)
     next();
 });
 
