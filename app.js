@@ -5,7 +5,7 @@ var app = express();
 var jsonParser = require('body-parser').json;
 
 // Use Modules with Express
-
+app.use(jsonParser());
 
 // Configure Middleware
 app.use(function(req, res, next) {
