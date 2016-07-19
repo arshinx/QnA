@@ -42,7 +42,13 @@ db.once("open", function(){
     var animal = new Animal({});
 
     // Create Whale using Animal Constructor
-    var whale = new Animal()
+    var whale = new Animal({
+        type: "whale",
+        size: "big",
+        mass: 190500,
+        name: "Fig"
+
+    });
 
     // Remove
     Animal.remove({}, function(err){
