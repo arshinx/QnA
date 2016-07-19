@@ -3,6 +3,7 @@
 var express = require('express');
 var app = express();
 var jsonParser = require('body-parser').json;
+var routes = require('./routes');
 
 // Use Modules with Express
 app.use(jsonParser());
