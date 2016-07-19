@@ -63,10 +63,10 @@ db.once("open", function(){
                     Animal.find({size: "big"}, function (err, animals) {
                         animals.forEach(function (animal) {
                             console.log(animal.name + " the " + aninmal.color + " " + animal.type)
-                        })
-                    });
-                    db.close(function () {
-                        console.log("DB Connection Closed!");
+                        });
+                        db.close(function () {
+                            console.log("DB Connection Closed!");
+                        });
                     });
                 });                
             });
