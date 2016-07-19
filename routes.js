@@ -87,6 +87,8 @@ router.post("/:qID/answers/:aID/vote-:dir", function(req, res){
             var err = new Error("Not Found");
             err.status = 404;
             next(err);
+        } else {
+            next();
         }
     
     }, function(req, res) {
