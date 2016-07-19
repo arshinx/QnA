@@ -2,4 +2,4 @@
 
 var mongoose = require('mongoose');
 
-mongoose.connect();
+mongoose.connect("mongodb://localhost");
