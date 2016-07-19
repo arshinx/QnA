@@ -38,6 +38,9 @@ db.once("open", function(){
 
     });
 
+    // Generic Goldfish
+    
+
     elephant.save(function (err) {
         if (err) console.error("Save Failed", err);
         else console.log("Saved!");
