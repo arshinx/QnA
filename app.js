@@ -8,6 +8,7 @@ var routes = require('./routes');
 var logger = require('morgan')
 
 // Use Modules with Express
+app.use(logger('dev'));
 app.use(jsonParser());
 app.use('/questions', routes);
 
