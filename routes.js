@@ -40,7 +40,7 @@ router.post("/:id/answers", function(req, res) {
     // Return All Questions - Stringify JSON
     res.json({
         response: "You sent me a Post Request to /answers",
-        questionID: "",
+        questionID: req.params.id,
         body: req.body
     });
 
