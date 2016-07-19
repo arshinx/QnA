@@ -61,8 +61,8 @@ db.once("open", function(){
                 whale.save(function(err) {
                     if (err) console.error("Save Failed", err);
                     Animal.find({size: "big"}, function (err, animals) {
-                        animals.forEach(function (animal) {
-                            console.log(animal.name + " the " + aninmal.color + " " + animal.type)
+                        animals.forEach(function(animal) {
+                            console.log(animal.name + " the " + animal.color + " " + animal.type)
                         });
                         db.close(function () {
                             console.log("DB Connection Closed!");
