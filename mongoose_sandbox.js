@@ -41,6 +41,9 @@ db.once("open", function(){
     // Generic Goldfish
     var animal = new Animal({});
 
+    // Create Whale using Animal Constructor
+    var whale = new Animal()
+
     // Remove
     Animal.remove({}, function(err){
         if (err) console.error("Save Failed", err);
