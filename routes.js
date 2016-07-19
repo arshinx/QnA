@@ -7,6 +7,9 @@ var router = express.Router();
 // Route for questions collection
 router.get("/", function(req, res) {
 
+    // Create 500 Error
+    var o = obj.prop;
+    
     // Return All Questions - Stringify JSON
     res.json({response: "You sent me a GET Request"});
 
