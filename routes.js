@@ -74,4 +74,21 @@ router.delete("/:qID/answers/aID", function(req, res) {
 
 })
 
+// Upvote and Downvote --
+
+// Post /questions/:qID/answers/:aID/vote-up
+// Post /questions/:qID/answers/:aID/vote-down
+// Vote a specific answer
+router.post("/:qID/answers/aID/vote-:dir", function(req, res) {
+
+    // Return All Questions - Stringify JSON
+    res.json({
+        response: "You sent me a Post Request to /vote-",
+        questionqID: req.params.qID,
+        answerID: req.params.aID,
+        body: req.body
+    });
+
+})
+
 module.exports = router;
