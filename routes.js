@@ -50,7 +50,7 @@ router.post("/:qID/answers", function(req, res) {
 
 // PUT /questions/:qID/answers/:aID
 // Edit a specific answer
-router.put("/:qID/answers/aID", function(req, res) {
+router.put("/:qID/answers/:aID", function(req, res) {
 
     // Return All Questions - Stringify JSON
     res.json({
