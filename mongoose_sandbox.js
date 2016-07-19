@@ -43,7 +43,7 @@ db.once("open", function(){
 
     // Remove
     Animal.remove({}, function(){
-
+        if (err) console.error("Save Failed", err);
         // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
         elephant.save(function (err) {
             if (err) console.error("Save Failed", err);
@@ -53,9 +53,7 @@ db.once("open", function(){
                     console.log("DB Connection Closed!");
                 });
             });
-            
         });
-
     }); 
     // Remove Fcn Ends here!
 
