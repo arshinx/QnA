@@ -9,3 +9,5 @@ var db = mongoose.connection;
 db.on("error", function(err) {
     console.error("connection error:", err)
 });
+
+db.once("open");
