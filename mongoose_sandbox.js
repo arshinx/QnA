@@ -10,4 +10,6 @@ db.on("error", function(err) {
     console.error("connection error:", err)
 });
 
-db.once("open");
+db.once("open", function(){
+    console.log("db connection succesful!")
+});
