@@ -20,6 +20,16 @@ app.use(function(req, res, next){
     next(err);
 });
 
+// Error Handler -- Extra Parameter helps differentiate between Error Handler and Middleware
+app.user(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.json({
+        error: {
+            message: err.message
+        }
+    });
+})
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function(){
