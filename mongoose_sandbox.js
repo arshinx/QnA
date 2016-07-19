@@ -18,7 +18,7 @@ db.once("open", function(){
     var AnimalSchema = new Schema({
 
         type:  {type: String, default: "goldfish"},
-        size:  {type: String, default: "small"},
+        size:  String,
         color: {type: String, default: "golden"},
         mass:  {type: Number, default: 0.007},
         name:  {type: String, default: "Angela"}
@@ -31,7 +31,6 @@ db.once("open", function(){
     // Elephant - Lawrence
     var elephant = new Animal({
         type: "Elephant",
-        size: "big",
         color: "gray",
         mass: 6000,
         name: "Lawrence"
@@ -44,22 +43,41 @@ db.once("open", function(){
     // Create Whale using Animal Constructor
     var whale = new Animal({
         type: "whale",
-        size: "big",
         mass: 190500,
         name: "Fig"
 
     });
 
+    // Array of objects
+    var AnimalData = [
+        {
+            type: "mouse",
+            color: "gray",
+            mass: 0.035,
+            name: "Marvin"
+        },
+        {
+            type: "nutria",
+            color: "brown",
+            mass: 6.35,
+            name: "Gretchen"   
+        },
+        {
+            type: "wolf",
+            color: "gray",
+            mass: 45,
+            name: "Iris"   
+        },
+        elephant,
+        animal,
+        whale
+    ];
+
     // Remove
     Animal.remove({}, function(err){
         if (err) console.error("Save Failed", err);
         // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
-        elephant.save(function (err) {
-            if (err) console.error("Save Failed", err);
-            animal.save(function(){
-                if (err) console.error("Save Failed", err);
-                whale.save(function(err) {
-                    if (err) console.error("Save Failed", err);
+        if (err) console.error("Save Failed", err);
                     Animal.find({size: "big"}, function (err, animals) {
                         animals.forEach(function(animal) {
                             console.log(animal.name + " the " + animal.color + " " + animal.type)
