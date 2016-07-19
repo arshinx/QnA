@@ -4,6 +4,7 @@ var express = require("express");
 var router = express.Router();
 
 // GET /questions
+// Route for questions collection
 router.get("/", function(req, res) {
 
     // Return All Questions - Stringify JSON
@@ -12,10 +13,12 @@ router.get("/", function(req, res) {
 });
 
 // POST /questions
-router.get("/", function(req, res) {
+router.post("/", function(req, res) {
 
     // Return All Questions - Stringify JSON
-    res.json({response: "You sent me a GET Request"});
+    res.json({
+        response: "You sent me a GET Request"
+    });
 
 });
 
