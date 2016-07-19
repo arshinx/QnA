@@ -5,10 +5,10 @@ var app = express();
 
 var jsonParser = require('body-parser').json;
 var routes = require('./routes');
-var logger = require('morgan')
+var logger = require('morgan');
 
 // Use Modules with Express
-app.use(logger('dev'));
+app.use(logger('dev')); // modify middleware to return colorful response codes
 app.use(jsonParser());
 app.use('/questions', routes);
 
