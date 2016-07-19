@@ -16,7 +16,7 @@ db.once("open", function(){
     // All DB Communication goes here
     var Schema = mongoose.Schema;
     var AnimalSchema = new Schema({
-        
+
         type: String,
         size: String,
         color: String,
@@ -24,6 +24,8 @@ db.once("open", function(){
         name: String
 
     });
+
+    var Animal = mongoose.model("Animal", AnimalSchema);
 
     db.close();
 });
