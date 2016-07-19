@@ -38,7 +38,9 @@ db.once("open", function(){
 
     });
 
-    elephant.save(function () {
+    elephant.save(function (err) {
+        if (err) console.error("Save Failed", err);
+        else console.log("Saved!");
         db.close();
     });
 });
