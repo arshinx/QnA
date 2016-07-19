@@ -36,7 +36,9 @@ db.once("open", function(){
         mass: 6000,
         name: "Lawrence"
 
-    })
+    });
 
-    db.close();
+    elephant.save(function () {
+        db.close();
+    });
 });
