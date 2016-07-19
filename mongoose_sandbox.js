@@ -44,11 +44,13 @@ db.once("open", function(){
     // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
     elephant.save(function (err) {
         if (err) console.error("Save Failed", err);
-        else console.log("Saved!");
-        db.close(function () {
-            console.log("DB Connection Closed!");
+        animal.save(function(){
+            if (err) console.error("Save Failed", err);
+            db.close(function () {
+                console.log("DB Connection Closed!");
+            });
         });
+        
     });
-
 
 }); // End db.once
