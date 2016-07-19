@@ -76,7 +76,7 @@ db.once("open", function(){
     // Remove
     Animal.remove({}, function(err){
         if (err) console.error("Save Failed", err);
-        // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
+        // Note: Save Function runs Asynchronously, we would not know which save fcn runs first
         Animal.create(animalData, function(err, animals) {
             if (err) console.error("Save Failed", err);
             Animal.find({size: "big"}, function (err, animals) {
