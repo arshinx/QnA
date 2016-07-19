@@ -25,8 +25,10 @@ db.once("open", function(){
 
     });
 
+    // Animal Object connecting to Animal Schema
     var Animal = mongoose.model("Animal", AnimalSchema);
 
+    // Elephant - Lawrence
     var elephant = new Animal({
         type: "Elephant",
         size: "big",
