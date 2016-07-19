@@ -83,10 +83,10 @@ router.post("/:qID/answers/aID/vote-:dir", function(req, res) {
 
     // Return All Questions - Stringify JSON
     res.json({
-        response: "You sent me a Post Request to /vote-",
+        response: "You sent me a Post Request to /vote-" + req.params.dir,
         questionqID: req.params.qID,
         answerID: req.params.aID,
-        body: req.body
+        vote: req.params.dir
     });
 
 })
