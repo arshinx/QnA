@@ -17,7 +17,7 @@ app.use('/questions', routes);
 app.use(function(req, res, next){
     var err = new Error("Not Found");
     err.status = 404;
-    next()err;
+    next(err);
 });
 
 var port = process.env.PORT || 3000;
