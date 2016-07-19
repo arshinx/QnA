@@ -43,19 +43,20 @@ db.once("open", function(){
 
     // Remove
     Animal.remove({}, function(){
-        
-    });
 
-    // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
-    elephant.save(function (err) {
-        if (err) console.error("Save Failed", err);
-        animal.save(function(){
+        // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
+        elephant.save(function (err) {
             if (err) console.error("Save Failed", err);
-            db.close(function () {
-                console.log("DB Connection Closed!");
+            animal.save(function(){
+                if (err) console.error("Save Failed", err);
+                db.close(function () {
+                    console.log("DB Connection Closed!");
+                });
             });
+            
         });
-        
-    });
+
+    }); 
+    // Remove Fcn Ends here!
 
 }); // End db.once
