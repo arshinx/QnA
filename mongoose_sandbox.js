@@ -14,4 +14,7 @@ db.once("open", function(){
     console.log("db connection succesful!");
 
     // All DB Communication goes here
+    var Schema = mongoose.Schema;
+
+    
 });
