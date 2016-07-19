@@ -2,8 +2,10 @@
 
 var express = require('express');
 var app = express();
+
 var jsonParser = require('body-parser').json;
 var routes = require('./routes');
+var logger = require('morgan')
 
 // Use Modules with Express
 app.use(jsonParser());
