@@ -17,6 +17,16 @@ app.use(function(req, res, next) {
 // Use Modules with Express
 app.use(jsonParser());
 
+// Configure Second Middleware
+app.use(function(req, res, next) {
+    if (req.body) {
+        console.log("The Sky is", req.body.color);
+    } else {
+        console.log("There is no body property on the request");
+    }
+    next();
+});
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function(){
