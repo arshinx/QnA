@@ -42,7 +42,9 @@ db.once("open", function(){
     var animal = new Animal({});
 
     // Remove
-    Animal.remove({});
+    Animal.remove({}, function(){
+        
+    });
 
     // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
     elephant.save(function (err) {
