@@ -39,7 +39,7 @@ db.once("open", function(){
     });
 
     // Generic Goldfish
-    
+    var animal = new Animal({});
 
     elephant.save(function (err) {
         if (err) console.error("Save Failed", err);
