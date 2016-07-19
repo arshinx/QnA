@@ -84,7 +84,9 @@ router.delete("/:qID/answers/:aID", function(req, res) {
 router.post("/:qID/answers/:aID/vote-:dir", function(req, res){
     
         if(req.params.dir.search(/^(up|down)$/) == -1) {
-
+            var err = new Error("Not Found");
+            err.status = 404;
+            next(err);
         }
     
     }, function(req, res) {
