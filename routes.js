@@ -52,8 +52,9 @@ router.put("/:qID/answers/aID", function(req, res) {
 
     // Return All Questions - Stringify JSON
     res.json({
-        response: "You sent me a Post Request to /answers",
+        response: "You sent me a PUT Request to /answers",
         questionqID: req.params.qID,
+        answerID: req.params.aID,
         body: req.body
     });
 
