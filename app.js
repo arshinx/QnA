@@ -7,6 +7,7 @@ var routes = require('./routes');
 
 // Use Modules with Express
 app.use(jsonParser());
+app.use('/questions', routes);
 
 var port = process.env.PORT || 3000;
 
