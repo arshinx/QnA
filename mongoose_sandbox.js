@@ -42,7 +42,7 @@ db.once("open", function(){
     var animal = new Animal({});
 
     // Remove
-    Animal.remove({}, function(){
+    Animal.remove({}, function(err){
         if (err) console.error("Save Failed", err);
         // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
         elephant.save(function (err) {
