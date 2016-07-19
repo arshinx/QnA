@@ -77,19 +77,18 @@ db.once("open", function(){
     Animal.remove({}, function(err){
         if (err) console.error("Save Failed", err);
         // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
-        if (err) console.error("Save Failed", err);
-                    Animal.find({size: "big"}, function (err, animals) {
-                        animals.forEach(function(animal) {
-                            console.log(animal.name + " the " + animal.color + " " + animal.type)
-                        });
-                        db.close(function () {
-                            console.log("DB Connection Closed!");
-                        });
-                    });
-                });                
+        Animal.create(animalData, function(err, animals) {
+            if (err) console.error("Save Failed", err);
+            Animal.find({size: "big"}, function (err, animals) {
+                animals.forEach(function(animal) {
+                    console.log(animal.name + " the " + animal.color + " " + animal.type)
+                });
+                db.close(function () {
+                    console.log("DB Connection Closed!");
+                });
             });
-        });
-    }); 
+        }); 
+    });
     // Remove Fcn Ends here!
 
 }); // End db.once
