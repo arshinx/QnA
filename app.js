@@ -4,14 +4,14 @@ var express = require('express');
 var app = express();
 var jsonParser = require('body-parser').json;
 
-// Use Modules with Express
-app.use(jsonParser());
-
 // Configure Middleware
 app.use(function(req, res, next) {
-    console.log("The leaves on the Tree are", req.query.color);
+    req.body;
     next();
 });
+
+// Use Modules with Express
+app.use(jsonParser());
 
 var port = process.env.PORT || 3000;
 
