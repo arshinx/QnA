@@ -23,7 +23,7 @@ router.post("/", function(req, res) {
 });
 
 
-// GET /questions
+// GET /:id
 // Route for questions collection
 router.get("/:id", function(req, res) {
 
