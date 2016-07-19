@@ -17,11 +17,11 @@ db.once("open", function(){
     var Schema = mongoose.Schema;
     var AnimalSchema = new Schema({
 
-        type: String,
-        size: String,
-        color: String,
-        mass: Number,
-        name: String
+        type:  {type: String, default: "goldfish"},
+        size:  {type: String, default: "small"},
+        color: {type: String, default: "golden"},
+        mass:  {type: Number, default: 0.007},
+        name:  {type: String, default: "Angela"}
 
     });
 
