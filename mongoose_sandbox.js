@@ -15,6 +15,7 @@ db.once("open", function(){
 
     // All DB Communication goes here
     var Schema = mongoose.Schema;
+    var AnimalSchema = new Schema({});
 
-    
+    db.close();
 });
