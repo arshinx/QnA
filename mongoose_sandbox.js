@@ -49,4 +49,6 @@ db.once("open", function(){
             console.log("DB Connection Closed!");
         });
     });
-});
+
+
+}); // End db.once
