@@ -41,6 +41,9 @@ db.once("open", function(){
     // Generic Goldfish
     var animal = new Animal({});
 
+    // Remove
+    Animal.remove({});
+
     // Note: Save Function runs Asynchronously, we woould not know which save fcn runs first
     elephant.save(function (err) {
         if (err) console.error("Save Failed", err);
