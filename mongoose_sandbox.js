@@ -27,5 +27,14 @@ db.once("open", function(){
 
     var Animal = mongoose.model("Animal", AnimalSchema);
 
+    var elephant = new Animal({
+        type: "Elephant",
+        size: "big",
+        color: "gray",
+        mass: 6000,
+        name: "Lawrence"
+
+    })
+
     db.close();
 });
