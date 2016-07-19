@@ -12,6 +12,14 @@ app.use(logger('dev')); // modify middleware to return colorful response codes
 app.use(jsonParser());
 app.use('/questions', routes);
 
+// Error Handling Middleware Setup
+// Catch 404 and forward to error handler
+app.use(function(req, res, next){
+    var err = new Error("Not Found");
+    err.status = 404;
+    next()err;
+});
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function(){
