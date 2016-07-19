@@ -58,9 +58,17 @@ db.once("open", function(){
             if (err) console.error("Save Failed", err);
             animal.save(function(){
                 if (err) console.error("Save Failed", err);
-                db.close(function () {
-                    console.log("DB Connection Closed!");
-                });
+                whale.save(function(err) {
+                    if (err) console.error("Save Failed", err);
+                    Animal.find({size: "big"}, function (err, animals) {
+                        animals.forEach(function (animal) {
+                            console.log(animal.name + " the " + aninmal.color + " " + animal.type)
+                        })
+                    });
+                    db.close(function () {
+                        console.log("DB Connection Closed!");
+                    });
+                });                
             });
         });
     }); 
