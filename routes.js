@@ -60,5 +60,18 @@ router.put("/:qID/answers/aID", function(req, res) {
 
 })
 
+// Delete /questions/:qID/answers/:aID
+// Delete a specific answer
+router.delete("/:qID/answers/aID", function(req, res) {
+
+    // Return All Questions - Stringify JSON
+    res.json({
+        response: "You sent me a Delete Request to /answers",
+        questionqID: req.params.qID,
+        answerID: req.params.aID,
+        body: req.body
+    });
+
+})
 
 module.exports = router;
