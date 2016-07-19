@@ -33,6 +33,8 @@ router.get("/:qID", function(req, res) {
 
 });
 
+// Answers --
+
 // POST /questions/:qID/answers
 // Route for creating an answer
 router.post("/:qID/answers", function(req, res) {
