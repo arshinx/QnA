@@ -6,7 +6,9 @@ var jsonParser = require('body-parser').json;
 
 // Configure Middleware
 app.use(function(req, res, next) {
-    req.body;
+    if (req.body) {
+        console.log("The Sky is", req.body.color);
+    }
     next();
 });
 
